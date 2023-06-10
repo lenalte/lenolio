@@ -16,6 +16,20 @@ window.onmousemove = e => {
     nextPercentage = Math.min(nextPercentage, 0);
     nextPercentage = Math.max(nextPercentage, -100);
 
+
+
+    // der Text soll verschwinden wenn man die Bilder verschiebt:
+
+    const textElement = document.getElementsByClassName("text")[0];
+
+    if (nextPercentage < 0) {
+        textElement.classList.add("hidden");
+    } else {
+        textElement.classList.remove("hidden");
+    }
+
+
+
     track.dataset.percentage = nextPercentage;
 
     track.animate({

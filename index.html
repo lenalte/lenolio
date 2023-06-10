@@ -20,7 +20,7 @@
         body {
             height: 100vh;
             width: 100vw;
-            background-color: rgb(22, 21, 21);
+            background-color: rgb(20, 19, 19);
             margin: 0rem;
             overflow: hidden;
         }
@@ -32,6 +32,22 @@
             font-family: 'Roboto Slab', serif;
             font-size: x-large;
             font-weight: 400;
+        }
+
+        .text {
+            color: white;
+            margin-left: 8rem;
+            object-position: center;
+            margin-top: 15rem;
+            font-family: 'Roboto Slab', serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .text.hidden {
+            opacity: 0;
         }
 
         #image-track>.image {
@@ -56,6 +72,8 @@
 <body>
 
     <h1 class="title">lenolio</h1>
+
+    <h1 class="text">Hi there, <br /> I am Lena and I like <br /> to design</h1>
 
     <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
         <img class="image"
