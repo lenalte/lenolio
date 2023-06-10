@@ -18,14 +18,17 @@
 
     <style>
         body {
-            height: 100vh;
+            height: auto;
+            /* height: 100vh; */
             width: 100vw;
             background-color: rgb(20, 19, 19);
             margin: 0rem;
-            overflow: hidden;
+            overflow: auto;
+            /* overflow: hidden; */
         }
 
         .title {
+            position: fixed;
             color: white;
             margin-left: 3.5rem;
             margin-top: 2.5rem;
@@ -35,10 +38,11 @@
         }
 
         .text {
+            position: absolute;
             color: white;
             margin-left: 8rem;
             object-position: center;
-            margin-top: 15rem;
+            margin-top: 11rem;
             font-family: 'Roboto Slab', serif;
             font-size: 3.5rem;
             font-weight: 400;
@@ -60,7 +64,7 @@
         #image-track {
             display: flex;
             gap: 4vmin;
-            position: absolute;
+            position: fixed;
             left: 50%;
             top: 50%;
             transform: translate(0%, -50%);
@@ -73,32 +77,36 @@
 
     <h1 class="title">lenolio</h1>
 
-    <h1 class="text">Hi there, <br /> I am Lena and I like <br /> to design</h1>
+    <h1 class="text" id="text1">Hi there, <br /> I am Lena and I like <br /> to design</h1>
+    <h1 class="text hidden" id="text2">projects <br />about me</h1>
+
+    <div style="height:250vh"></div>
+
 
     <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
         <img class="image"
-            src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2044&q=80"
+            src="https://images.unsplash.com/photo-1525278070609-779c7adb7b71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2047&q=80"
             draggable="false" />
         <img class="image"
             src="https://images.unsplash.com/photo-1549277513-f1b32fe1f8f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             draggable="false" />
         <img class="image"
-            src="https://plus.unsplash.com/premium_photo-1670106460995-79401c69d066?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+            src="https://images.unsplash.com/photo-1558522195-e1201b090344?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             draggable="false" />
         <img class="image"
-            src="https://images.unsplash.com/photo-1604077198996-4eb67c32f6a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njh8fGFydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60"
+            src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
             draggable="false" />
         <img class="image"
             src="https://images.unsplash.com/photo-1582201957424-621320ad670d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1909&q=80"
             draggable="false" />
         <img class="image"
-            src="https://images.unsplash.com/photo-1549289524-06cf8837ace5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+            src="https://images.unsplash.com/photo-1603101243278-c181ceaad748?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fGRyYXdpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60"
             draggable="false" />
         <img class="image"
-            src="https://images.unsplash.com/photo-1545050814-0a22f900193e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80"
+            src="https://images.unsplash.com/photo-1588534724418-73b75d412ce5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
             draggable="false" />
         <img class="image"
-            src="https://images.unsplash.com/photo-1576773689115-5cd2b0223523?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1010&q=80"
+            src="https://images.unsplash.com/photo-1593073862407-a3ce22748763?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
             draggable="false" />
     </div>
 

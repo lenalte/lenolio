@@ -48,3 +48,29 @@ window.onmouseup = e => {
     track.dataset.prevPercentage = track.dataset.percentage;
 }
 
+
+
+window.onscroll = e => {
+    const textElement1 = document.getElementById("text1");
+    const textElement2 = document.getElementById("text2");
+
+    // Calculate new top position depending on scroll position
+    let newTop = window.scrollY + 15 * window.innerHeight / 100; // 15% of viewport height
+
+    // Change top property
+    textElement1.style.top = `${newTop}px`;
+    textElement2.style.top = `${newTop}px`;
+
+    // Check if we scrolled past the initial screen height
+    if (window.scrollY > window.innerHeight) {
+        // Hide the first text and show the second
+        textElement1.classList.add("hidden");
+        textElement2.classList.remove("hidden");
+    } else {
+        // Show the first text and hide the second
+        textElement1.classList.remove("hidden");
+        textElement2.classList.add("hidden");
+    }
+}
+
+
