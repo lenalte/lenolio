@@ -53,6 +53,8 @@ window.onmouseup = e => {
 window.onscroll = e => {
     const textElement1 = document.getElementById("text1");
     const textElement2 = document.getElementById("text2");
+    const frameElement = document.getElementById("frame");
+    const imageTrack = document.getElementById("image-track");
 
     // Calculate new top position depending on scroll position
     let newTop = window.scrollY + 15 * window.innerHeight / 100; // 15% of viewport height
@@ -70,6 +72,17 @@ window.onscroll = e => {
         // Show the first text and hide the second
         textElement1.classList.remove("hidden");
         textElement2.classList.add("hidden");
+    }
+
+    if (window.scrollY > window.innerHeight + imageTrack.offsetHeight) {
+        let newImageTrackTop = window.innerHeight + imageTrack.offsetHeight - window.scrollY;
+        imageTrack.style.top = `${newImageTrackTop}px`;
+        textElement1.style.top = `${newTop - window.scrollY}px`;
+        textElement2.style.top = `${newTop - window.scrollY}px`;
+        frameElement.style.marginTop = `${newImageTrackTop}px`;
+    } else {
+        imageTrack.style.top = "50%";
+        frameElement.style.marginTop = "0px";
     }
 }
 
