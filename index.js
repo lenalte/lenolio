@@ -47,6 +47,7 @@ window.onscroll = e => {
     const frameElement = document.getElementById("frame");
     const imageTrack = document.getElementById("image-track");
 
+
     // Calculate new top position depending on scroll position
     let newTop = window.scrollY + 15 * window.innerHeight / 100; // 15% of viewport height
 
