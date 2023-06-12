@@ -38,6 +38,7 @@
         }
 
         .text {
+            /* position: sticky; */
             position: absolute;
             color: white;
             margin-left: 8rem;
@@ -54,6 +55,10 @@
             opacity: 0;
         }
 
+        /* .hidden {
+            display: none;
+        } */
+
         #image-track>.image {
             width: 40vmin;
             height: 56vmin;
@@ -64,17 +69,25 @@
         #image-track {
             display: flex;
             gap: 4vmin;
+            /* position: fixed; */
             position: fixed;
             left: 50%;
             top: 50%;
             transform: translate(0%, -50%);
+            transition: opacity 0.5s ease;
+        }
+
+        #image-track.hidden {
+            opacity: 0;
         }
 
         .frame {
+            z-index: 1;
             height: 110vh;
             width: 100vw;
             background-color: white;
             display: flex;
+            z-index: 1;
         }
 
         .project1 {
@@ -114,10 +127,11 @@
 
     <h1 class="title">lenolio</h1>
 
-    <h1 class="text" id="text1">Hi there, <br /> I am Lena and I like <br /> to design</h1>
-    <h1 class="text hidden" id="text2">projects <br />about me</h1>
 
-    <div style="height:250vh"></div>
+
+    <h1 class="text" id="text1">Hi there, <br /> I am Lena and I like <br /> to design</h1>
+
+    <div style="height:100vh"></div>
 
 
     <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
