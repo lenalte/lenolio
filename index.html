@@ -28,6 +28,7 @@
         }
 
         .title {
+            z-index: 4;
             position: fixed;
             /* color: white; */
             margin-left: 3.5rem;
@@ -37,6 +38,7 @@
         }
 
         .menu {
+            z-index: 4;
             display: flex;
             position: fixed;
             margin-left: 44%;
@@ -65,14 +67,15 @@
         }
 
         .text {
+            z-index: 1;
             /* position: sticky; */
             position: absolute;
             color: white;
             margin-left: 8rem;
             object-position: center;
-            margin-top: 11rem;
+            margin-top: 7rem;
             font-family: 'Roboto Slab', serif;
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 400;
             opacity: 1;
             transition: opacity 0.5s ease;
@@ -94,6 +97,7 @@
         }
 
         #image-track {
+            z-index: 1;
             display: flex;
             gap: 4vmin;
             /* position: fixed; */
@@ -109,7 +113,7 @@
         }
 
         #frame {
-            z-index: 1;
+            z-index: 2;
             height: 110vh;
             width: 100vw;
             background-color: white;
@@ -120,11 +124,21 @@
         #frame>.box {
             height: 110vh;
             width: 20%;
+            border: none;
         }
 
         #frame>.box:hover {
             width: 30%;
-            transition: 0.5s ease;
+            /* transition: 0.5s ease; */
+            transition-timing-function: ease;
+            transition-duration: 400ms;
+        }
+
+        #frame>.box:active {
+            width: 100vw;
+            z-index: 3;
+            transition-timing-function: ease;
+            transition-duration: 10ms;
         }
 
         .project1 {
@@ -155,14 +169,18 @@
     <h1 class="title">lenolio</h1>
 
     <div class="menu">
-        <h1 class="gallery">gallery</h1>
-        <h1 class="projects">projects</h1>
+        <h1 class="gallery" href="#">gallery</h1>
+        <h1 class="projects" href="#">projects</h1>
     </div>
 
 
 
 
-    <h1 class="text" id="text1">Hi there, <br /> I am Lena and I like <br /> to design</h1>
+    <h1 class="text" id="text1">Welcome to my <br /> design playground, <br /> where ideas <br /> come to play, evolve,
+        <br />
+        and
+        inspire.
+    </h1>
 
     <div style="height:175vh"></div>
 
@@ -195,11 +213,11 @@
     </div>
 
     <div id="frame" class="frame">
-        <div class="box project1"></div>
-        <div class="box project2"></div>
-        <div class="box project3"></div>
-        <div class="box project4"></div>
-        <div class="box project5"></div>
+        <a class="box project1" href="project1.html" type="button"></a>
+        <a class="box project2" href="project2.html" type="button"></a>
+        <a class="box project3" href="project3.html" type="button"></a>
+        <a class="box project4" href="project4.html" type="button"></a>
+        <a class="box project5" href="project5.html" type="button"></a>
     </div>
 
 
