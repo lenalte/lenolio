@@ -46,6 +46,7 @@ window.onscroll = e => {
     const textElement1 = document.getElementById("text1");
     const frameElement = document.getElementById("frame");
     const imageTrack = document.getElementById("image-track");
+    const clickDrag = document.getElementById("clickDrag");
 
 
     // Calculate new top position depending on scroll position
@@ -59,20 +60,24 @@ window.onscroll = e => {
         // Hide the text
         textElement1.classList.add("hidden");
         imageTrack.classList.add("hidden");
+        clickDrag.classList.add("hidden");
     } else {
         // Show the text
         textElement1.classList.remove("hidden");
         imageTrack.classList.remove("hidden");
+        clickDrag.classList.remove("hidden");
     }
 
     if (window.scrollY > imageTrack.offsetHeight) {
         // Hide the images
         textElement1.classList.add("hidden");
         imageTrack.classList.add("hidden");
+        clickDrag.classList.add("hidden");
     } else {
         // Show the images
         textElement1.classList.remove("hidden");
         imageTrack.classList.remove("hidden");
+        clickDrag.classList.remove("hidden");
     }
 
 
@@ -80,10 +85,13 @@ window.onscroll = e => {
         let newImageTrackTop = window.innerHeight + imageTrack.offsetHeight - window.scrollY;
         imageTrack.style.top = `${newImageTrackTop}px`;
         textElement1.style.top = `${newTop - window.scrollY}px`;
+        clickDrag.style.top = `${newTop - window.scrollY}px`;
         frameElement.style.marginTop = `${newImageTrackTop}px`;
     } else {
         imageTrack.style.top = "50%";
         frameElement.style.marginTop = "0px";
+        clickDrag.style.marginTop = "0px";
     }
 }
+
 

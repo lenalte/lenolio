@@ -51,6 +51,13 @@
             font-weight: 400;
         }
 
+        h2 {
+            color: white;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 200;
+            font-size: large;
+        }
+
         .gallery:hover {
             font-weight: 600;
             transition: 0.2s ease;
@@ -62,6 +69,74 @@
             transition: 0.2s ease;
             cursor: pointer;
         }
+
+        .mockup {
+            width: 80vmin;
+            height: 80vmin;
+            object-fit: cover;
+            /* position: absolute; */
+            margin-top: 10rem;
+            margin-right: 1rem;
+        }
+
+        .mockup2 {
+            width: 172vmin;
+            height: 72vmin;
+            object-fit: cover;
+            margin-top: 10rem;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 15rem;
+            /* position: center; */
+        }
+
+        .mockup3 {
+            width: 80vmin;
+            height: 75vmin;
+            object-fit: cover;
+            margin-right: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .start {
+            display: flex;
+        }
+
+        .explenation {
+            margin-right: 20rem;
+            margin-top: 15rem;
+            font-size: xxx-large;
+        }
+
+        .start-text {
+            display: flex;
+            flex-direction: column;
+            margin-left: 5rem;
+            margin-right: 5rem;
+        }
+
+        .home-screen {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 2rem;
+        }
+
+        .functions {
+            margin-left: 3rem;
+            margin-top: 1rem;
+        }
+
+        .caption {
+            margin-left: 3rem;
+            margin-top: 5rem;
+            font-size: x-large;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 
@@ -71,6 +146,50 @@
     <div class="menu">
         <h1 class="gallery" href="#">gallery</h1>
         <h1 class="projects" href="#">projects</h1>
+    </div>
+
+    <div class="start">
+        <img class="mockup" src="./Galaxy Note 20 Ultra.png" draggable="false" />
+        <div class="start-text">
+            <h1 class="explenation">DB for safety</h1>
+            <h2 class="explenation2">Feminist theory sees a connection between all kinds of violence and worldwide
+                security
+                to local matters. Through the DB for women project in Germany, we're striving to build an environment
+                where
+                women can exist fearlessly. We've created an app targeting young and susceptible women who depend on
+                public
+                transportation, allowing them to map out secure paths based on the reviews of other women and identify
+                safe
+                areas. The app mitigates fear for the users and their community, and it incorporates an emergency panel
+                for
+                immediate communication, incident documentation, and evidence collection.</h2>
+        </div>
+
+    </div>
+
+    <div>
+        <img class="mockup2" src="./Group 88.png" draggable="false" />
+    </div>
+
+    <div class="home-screen">
+
+        <div class="text-container">
+            <h2 class="caption">emergency board on home screen:</h2>
+            <h2 class="functions">
+
+                - emergency audio recording triggered by user defined signs (like shaking phone very heavily, pushing
+                buttons multiple times) in order to take actions against potential harassers <br />
+                - emergency call: user fills in contact numbers for quick and easy contacting in emergency situations
+                <br />
+                - report assaults immediatly: user fills in data in advance to report quickly in shock situations
+                without extra effort <br />
+                - contact others who also use the app to be able to travel in groups (trainsharing): <br /> users who
+                have
+                agreed are displayed on the map to allow finding each other much easier <br />
+                - share planned route or real-time gps coordinates with friends, family or police
+            </h2>
+        </div>
+        <img class="mockup3" src="./Group 89.png" draggable="false" />
     </div>
 </body>
 
