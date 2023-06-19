@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lenolio/project1</title>
 
+    <link rel="icon" type="image/png" href="./images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -58,6 +59,12 @@
             font-size: large;
         }
 
+        p {
+            color: white;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 400;
+        }
+
         .gallery:hover {
             font-weight: 600;
             transition: 0.2s ease;
@@ -71,17 +78,17 @@
         }
 
         .mockup {
-            width: 80vmin;
-            height: 80vmin;
+            width: 100vmin;
+            height: 100vmin;
             object-fit: cover;
             /* position: absolute; */
-            margin-top: 10rem;
+            margin-top: 2rem;
             margin-right: 1rem;
         }
 
         .mockup2 {
             width: 172vmin;
-            height: 72vmin;
+            height: 69.5vmin;
             object-fit: cover;
             margin-top: 10rem;
             margin-left: auto;
@@ -104,9 +111,9 @@
         }
 
         .explenation {
-            margin-right: 20rem;
-            margin-top: 15rem;
-            font-size: xxx-large;
+            margin-right: -4rem;
+            margin-top: 20rem;
+            margin-left: -13rem;
         }
 
         .start-text {
@@ -123,19 +130,27 @@
         }
 
         .functions {
-            margin-left: 3rem;
-            margin-top: 1rem;
-        }
-
-        .caption {
-            margin-left: 3rem;
-            margin-top: 5rem;
-            font-size: x-large;
+            margin-left: 5rem;
+            margin-right: 10rem;
+            margin-top: 6rem;
         }
 
         .text-container {
             display: flex;
             flex-direction: column;
+            margin-top: 5rem;
+        }
+
+        .caption {
+            font-size: x-large;
+        }
+
+        .mockupWatch {
+            height: 30vh;
+            width: 35vw;
+            display: block;
+            margin-top: 33rem;
+            margin-right: 5rem;
         }
     </style>
 </head>
@@ -144,53 +159,56 @@
     <h1 class="title">lenolio</h1>
 
     <div class="menu">
-        <h1 class="gallery" href="#">gallery</h1>
-        <h1 class="projects" href="#">projects</h1>
+        <h1 type="button" class="gallery" onClick="navigateToIndex();">
+            gallery</h1>
+        <h1 type="button" class="projects" onClick="navigateToProjects();">
+            projects</h1>
     </div>
 
     <div class="start">
-        <img class="mockup" src="./images/Galaxy Note 20 Ultra.png" draggable="false" />
+        <img class="mockup" src="./images/DBsafety1.png" draggable="false" />
         <div class="start-text">
-            <h1 class="explenation">DB for safety</h1>
-            <h2 class="explenation2">Feminist theory sees a connection between all kinds of violence and worldwide
+            <!-- <h1 class="explenation">DB for safety</h1> -->
+            <p class="explenation2 explenation">Feminist theory sees a connection between all kinds of violence and
+                worldwide
                 security
-                to local matters. Through the DB for women project in Germany, we're striving to build an environment
+                to local matters. <br /> Through the DB for women project, we're striving to build an environment
                 where
                 women can exist fearlessly. We've created an app targeting young and susceptible women who depend on
                 public
                 transportation, allowing them to map out secure paths based on the reviews of other women and identify
                 safe
-                areas. The app mitigates fear for the users and their community, and it incorporates an emergency panel
+                areas. <br /> The app mitigates fear for the users and their community, and it incorporates an emergency
+                panel
                 for
-                immediate communication, incident documentation, and evidence collection.</h2>
+                immediate communication, incident documentation, and evidence collection.</p>
         </div>
+        <img class="mockupWatch" src="./images/DBsafetyWatch.png" draggable="false" />
 
     </div>
 
     <div>
-        <img class="mockup2" src="./images/Group 88.png" draggable="false" />
+        <img class="mockup2" src="./images/DBsafety2.png" draggable="false" />
     </div>
 
     <div class="home-screen">
 
         <div class="text-container">
-            <h2 class="caption">emergency board on home screen:</h2>
-            <h2 class="functions">
+            <!-- <p class="functions caption">emergency board on home screen:</p> -->
+            <p class="functions">
 
-                - emergency audio recording triggered by user defined signs (like shaking phone very heavily, pushing
-                buttons multiple times) in order to take actions against potential harassers <br />
-                - emergency call: user fills in contact numbers for quick and easy contacting in emergency situations
-                <br />
-                - report assaults immediatly: user fills in data in advance to report quickly in shock situations
-                without extra effort <br />
-                - contact others who also use the app to be able to travel in groups (trainsharing): <br /> users who
-                have
-                agreed are displayed on the map to allow finding each other much easier <br />
-                - share planned route or real-time gps coordinates with friends, family or police
-            </h2>
+                The emergency board on the app's home screen provides a comprehensive set of features designed to
+                enhance personal safety and expedite emergency response. <br /> <br />From triggering emergency audio
+                recordings to
+                quick access to emergency contacts, streamlined reporting, group travel facilitation, and location
+                sharing, these features empower users to take proactive measures and seek assistance when needed,
+                fostering a greater sense of security in potentially dangerous situations.
+            </p>
         </div>
         <img class="mockup3" src="./images/Group 89.png" draggable="false" />
     </div>
+
+    <script src="index.js"></script>
 </body>
 
 </html>

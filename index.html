@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="#">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
     <title>lenolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -189,47 +189,55 @@
     <h1 class="title">lenolio</h1>
 
     <div class="menu">
-        <h1 class="gallery" href="#">gallery</h1>
-        <h1 class="projects" href="#">projects</h1>
+        <h1 type="button" onClick="document.getElementById('gallery').scrollIntoView();" class="gallery" href="#">
+            gallery</h1>
+        <h1 type="button" onClick="document.getElementById('projects').scrollIntoView();" class="projects" href="#">
+            projects</h1>
     </div>
 
 
+    <div id="gallery">
+
+        <h1 class="text" id="text1">Welcome to my <br /> design playground, <br /> where ideas <br /> come to play,
+            evolve,
+            <br />
+            and
+            inspire.
+        </h1>
+
+        <h2 class="clickAndDrag" id="clickDrag"> <-> click and drag</h2>
+
+        <div style="height:175vh"></div>
 
 
-    <h1 class="text" id="text1">Welcome to my <br /> design playground, <br /> where ideas <br /> come to play, evolve,
-        <br />
-        and
-        inspire.
-    </h1>
+        <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+            <img class="image" src="./images/giraffe.jpg" draggable="false" />
+            <img class="image" src="./images/frog-mockup2.jpg" draggable="false" />
+            <img class="image" src="./images/PXL_20230613_133349791~4.jpg" draggable="false" />
+            <img class="image" src="./images/bug.jpg" draggable="false" />
+            <img class="image" src="./images/doc Kopie.png" draggable="false" />
+            <img class="image" src="./images/portraitphoto.jpg" draggable="false" />
+            <img class="image" src="./images/protraitphoto2.jpeg" draggable="false" />
+            <img class="image" src="./images/typo1.png" draggable="false" />
+            <img class="image" src="./images/typo2.png" draggable="false" />
+            <img class="image" src="./images/typo3.png" draggable="false" />
+            <img class="image" src="./images/typo4.png" draggable="false" />
+            <img class="image" src="./images/typo5.png" draggable="false" />
+            <img class="image" src="./images/typo6.png" draggable="false" />
+        </div>
 
-    <h2 class="clickAndDrag" id="clickDrag"> <-> click and drag</h2>
-
-    <div style="height:175vh"></div>
-
-
-    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-        <img class="image" src="./images/giraffe.jpg" draggable="false" />
-        <img class="image" src="./images/frog-mockup2.jpg" draggable="false" />
-        <img class="image" src="./images/PXL_20230613_133349791~4.jpg" draggable="false" />
-        <img class="image" src="./images/bug.jpg" draggable="false" />
-        <img class="image" src="./images/doc Kopie.png" draggable="false" />
-        <img class="image"
-            src="https://images.unsplash.com/photo-1603101243278-c181ceaad748?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fGRyYXdpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=900&q=60"
-            draggable="false" />
-        <img class="image"
-            src="https://images.unsplash.com/photo-1588534724418-73b75d412ce5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-            draggable="false" />
-        <img class="image"
-            src="https://images.unsplash.com/photo-1593073862407-a3ce22748763?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
-            draggable="false" />
     </div>
 
-    <div id="frame" class="frame">
-        <a class="box project1" href="project1.html" type="button"></a>
-        <a class="box project2" href="project2.html" type="button"></a>
-        <a class="box project3" href="project3.html" type="button"></a>
-        <a class="box project4" href="project4.html" type="button"></a>
-        <a class="box project5" href="project5.html" type="button"></a>
+    <div id="projects">
+
+        <div id="frame" class="frame">
+            <a class="box project1" href="project1.html" type="button"></a>
+            <a class="box project2" href="project2.html" type="button"></a>
+            <a class="box project3" href="project3.html" type="button"></a>
+            <a class="box project4" href="project4.html" type="button"></a>
+            <a class="box project5" href="project5.html" type="button"></a>
+        </div>
+
     </div>
 
 

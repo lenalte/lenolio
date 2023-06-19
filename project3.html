@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lenolio/project1</title>
 
+    <link rel="icon" type="image/png" href="./images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -58,6 +59,12 @@
             font-size: large;
         }
 
+        p {
+            color: white;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 400;
+        }
+
         .gallery:hover {
             font-weight: 600;
             transition: 0.2s ease;
@@ -98,6 +105,56 @@
             margin-top: 10rem;
             margin-bottom: 2rem;
         }
+
+        .mockups-container {
+            padding-top: 5rem;
+        }
+
+        .start {
+            display: flex;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            margin-left: 8rem;
+            margin-top: 13rem;
+            margin-right: 2rem;
+
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            margin-right: 5rem;
+            margin-left: 2rem;
+            margin-top: 10rem;
+            text-align: end;
+        }
+
+        .element {
+            margin-bottom: 5rem;
+        }
+
+        .line {
+            border-bottom: 1px solid white;
+        }
+
+        .explenation {
+            display: flex;
+        }
+
+        .explenation-text {
+            margin-right: -28rem;
+            margin-left: 7rem;
+            margin-top: 20rem;
+        }
+
+        .explenation-text2 {
+            margin-left: -15rem;
+            margin-top: 35rem;
+            margin-right: 5rem;
+        }
     </style>
 </head>
 
@@ -105,22 +162,53 @@
     <h1 class="title">lenolio</h1>
 
     <div class="menu">
-        <h1 class="gallery" href="#">gallery</h1>
-        <h1 class="projects" href="#">projects</h1>
+        <h1 type="button" class="gallery" onClick="navigateToIndex();">
+            gallery</h1>
+        <h1 type="button" class="projects" onClick="navigateToProjects();">
+            projects</h1>
     </div>
 
-    <div class="start">
-        <img class="smart-tutoring-start" src="./images/iPhone 13 Pro.png" />
+    <div class="mockups-container">
+        <div class="start">
+            <div class="left">
+                <h2 class="element line">1. register</h2>
+                <h2 class="element line">2. fill out questionnaire</h2>
+            </div>
+
+            <img class="smart-tutoring-start" src="./images/smarttutoring1_1.png" />
+            <div class="right">
+                <h2 class="element line">3. find perfectly suited tutor</h2>
+                <h2 class="element line">4. contact</h2>
+                <h2 class="element line">5. become better student</h2>
+            </div>
+        </div>
+
+        <div class="explenation">
+            <!-- <h2>text über smart tutoring</h2> -->
+            <p class="explenation-text">Smart Tutoring is an online platform designed to connect students with
+                tutors who perfectly align with their educational requirements. <br /> <br /> This exceptional feature
+                is facilitated
+                through comprehensive questionnaires that both students and tutors are required to complete. <br />
+                <br /> These
+                questionnaires enable an algorithm to carefully match the ideal tutor to each student,
+                resulting in a tailored and highly effective learning experience.
+            </p>
+            <img class="mockup" src="./images/smarttutoring2_2.png" />
+
+        </div>
+
+        <div class="explenation">
+            <img class="mockup2" src="./images/smarttutoring3_3.png" />
+            <p class="explenation-text2"> The questionnaires in Smart Tutoring cover crucial aspects such as language
+                proficiency and subject
+                expertise to facilitate the ideal tutor-student matches. <br /> <br /> The platform thrives on the
+                generosity
+                of
+                tutors who volunteer their time, making education more accessible and equitable for all.</p>
+        </div>
     </div>
 
-    <div style="background-image: url(./Surface\ Laptop\ Studio.png);">
-        <!-- <h2>text über smart tutoring</h2> -->
-        <img class="mockup" src="./images/Surface Laptop Studio.png" />
-    </div>
-
-    <div>
-        <img class="mockup2" src="./images/MacBook Pro 16(2).png" />
-    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>

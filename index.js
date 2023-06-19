@@ -94,4 +94,12 @@ window.onscroll = e => {
     }
 }
 
+function navigateToIndex() {
+    window.location.href = './index.html';
+}
+
+function navigateToProjects() {
+    window.location.href = './index.html#projects';
+}
+
 

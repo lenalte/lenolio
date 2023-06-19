@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lenolio/project1</title>
 
+    <link rel="icon" type="image/png" href="./images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -51,6 +52,12 @@
             font-weight: 400;
         }
 
+        p {
+            color: white;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 400;
+        }
+
         .gallery:hover {
             font-weight: 600;
             transition: 0.2s ease;
@@ -62,6 +69,53 @@
             transition: 0.2s ease;
             cursor: pointer;
         }
+
+        .mockup-container {
+            padding-top: 3.5rem;
+        }
+
+        .mockup1 {
+            height: 90vh;
+            width: 80vw;
+            object-fit: cover;
+            /* margin-left: auto;
+            margin-right: auto;
+            display: block; */
+            margin-bottom: 11rem;
+        }
+
+        .mockup2 {
+            height: 80vh;
+            width: 80vw;
+            object-fit: cover;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: 11rem;
+        }
+
+        .mockup3 {
+            height: 85vh;
+            width: 70vw;
+            object-fit: cover;
+        }
+
+        .explenation {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .explenation-text {
+            margin-left: -5rem;
+            margin-right: 5rem;
+            margin-top: 15rem;
+        }
+
+        .explenation-text2 {
+            margin-left: 8rem;
+            margin-top: 15rem;
+            margin-right: -5rem;
+        }
     </style>
 </head>
 
@@ -69,9 +123,35 @@
     <h1 class="title">lenolio</h1>
 
     <div class="menu">
-        <h1 class="gallery" href="#">gallery</h1>
-        <h1 class="projects" href="#">projects</h1>
+        <h1 type="button" class="gallery" onClick="navigateToIndex();">
+            gallery</h1>
+        <h1 type="button" class="projects" onClick="navigateToProjects();">
+            projects</h1>
     </div>
+    <div class="mockup-container">
+        <div class="explenation">
+            <img class="mockup1" src="./images/co2App1.png" />
+            <p class="explenation-text">This app revolutionizes how you calculate and visualize your CO2 footprint. By
+                completing the initial
+                questionnaire, you can determine your average carbon emissions and compare them to global and national
+                averages. <br /> <br /> Additionally, the ability to connect with your car provides further insights
+                into your
+                transportation-related carbon emissions, fostering an eco-conscious mindset and facilitating a greener
+                lifestyle. </p>
+        </div>
+        <div>
+            <img class="mockup2" src="./images/co2App2.png" />
+        </div>
+        <div class="explenation">
+            <p class="explenation-text2">Another noteworthy feature of the app is the ability to browse through a wealth
+                of extra tips on how to
+                lead a more climate-friendly lifestyle. With this feature, you can explore a variety of resources and
+                recommendations to enhance your environmental consciousness and make sustainable choices.</p>
+            <img class="mockup3" src="./images/co2App3.png" />
+        </div>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 
 </html>

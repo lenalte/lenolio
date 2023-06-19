@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lenolio/project1</title>
 
+    <link rel="icon" type="image/png" href="./images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -51,6 +52,12 @@
             font-weight: 400;
         }
 
+        p {
+            color: white;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 400;
+        }
+
         .gallery:hover {
             font-weight: 600;
             transition: 0.2s ease;
@@ -74,14 +81,14 @@
         }
 
         .mockup2 {
-            height: 145vh;
+            height: 170vh;
             width: 100vw;
             object-fit: cover;
             margin-bottom: 15rem;
         }
 
         .mockup3 {
-            height: 85vh;
+            height: 90vh;
             width: 75vw;
             object-fit: cover;
         }
@@ -89,7 +96,7 @@
         .verlauf {
             display: flex;
             justify-content: flex-end;
-            margin-bottom: 15rem;
+            margin-bottom: 10rem;
         }
 
         .mockup4 {
@@ -102,6 +109,58 @@
             display: flex;
             justify-content: flex-end;
         }
+
+        .mockups-container {
+            padding-top: 6rem;
+        }
+
+        .start {
+            display: flex;
+            /* margin-bottom: 15rem; */
+        }
+
+        .left {
+            margin-left: 4rem;
+            margin-top: 9rem;
+            margin-right: 2rem;
+            font-size: 1.3rem;
+        }
+
+        .right {
+            margin-right: 4rem;
+            margin-left: 2rem;
+            margin-top: 9rem;
+            text-align: end;
+            font-size: 1.3rem;
+        }
+
+        .element {
+            margin-bottom: 6rem;
+        }
+
+        .line {
+            border-bottom: 1px solid white;
+        }
+
+        .Gedankensenf {
+            margin-left: 20rem;
+            margin-right: 20rem;
+            text-align: center;
+            margin-top: -10rem;
+            margin-bottom: 10rem;
+        }
+
+        .verlauf-text {
+            margin-left: 5rem;
+            margin-top: 12rem;
+            margin-right: -10rem;
+        }
+
+        .save-text {
+            margin-left: 5rem;
+            margin-top: 23rem;
+            margin-right: -15rem;
+        }
     </style>
 </head>
 
@@ -109,25 +168,76 @@
     <h1 class="title">lenolio</h1>
 
     <div class="menu">
-        <h1 class="gallery" href="#">gallery</h1>
-        <h1 class="projects" href="#">projects</h1>
+        <h1 type="button" class="gallery" onClick="navigateToIndex();">
+            gallery</h1>
+        <h1 type="button" class="projects" onClick="navigateToProjects();">
+            projects</h1>
+    </div>
+    <div class="mockups-container">
+        <div class="start">
+            <div class="left">
+                <p class="element line">scan art</p>
+                <p class="element line">learn about art & artist</p>
+                <p class="element line">read peoples thoughts and give your own</p>
+            </div>
+            <img class="mockup1" src="./images/Gedankensenf-start.png" />
+            <div class="right">
+                <p class="element line">look up specific pieces & artists</p>
+                <p class="element line">save your favourite artworks</p>
+                <p class="element line">get art recommendations</p>
+            </div>
+        </div>
+
+        <div class="Gedankensenf">
+            <p>Have you ever stood before a perplexing abstract masterpiece in an art museum, pondering its meaning with
+                a mixture of curiosity and bewilderment? If so, then Gedankensenf is the perfect app for you.
+                Gedankensenf is designed to cater to those who have a genuine interest in art but may find it
+                challenging to comprehend.
+                <br /> <br />
+                Imagine encountering an enigmatic artwork, seemingly devoid of clear interpretation. With Gedankensenf,
+                you can effortlessly share your thoughts and reflections about the piece, all while remaining anonymous.
+                Furthermore, you have the opportunity to explore the intriguing perspectives of others, ranging from
+                thought-provoking insights to those that may not captivate your interest as much.
+                <br /> <br />
+                The app goes beyond providing a platform for exchanging ideas. It also offers a valuable resource for
+                expanding your understanding of the artist and their work. By simply scanning the artwork directly
+                within the museum, Gedankensenf allows you to access information about the artist and gain deeper
+                insights into the specific piece. This feature serves as a gateway to unlocking the context and
+                significance behind the art, fostering a richer appreciation for its complexities.
+            </p>
+        </div>
+
+        <div>
+            <img class="mockup2" src="./images/Gedankensenf-phones.png" />
+        </div>
+
+        <div class="verlauf">
+            <p class="verlauf-text">
+                Gedankensenf offers a unique feature that allows you to revisit the artworks you have scanned after a
+                fulfilling day at the art museum. With this feature, you can engage in meaningful discussions about your
+                opinions and the captivating artworks that made a lasting impression on you, whether with friends or
+                family.
+                <br /> <br />
+                By reliving your museum visit through the app, you can revisit the artworks that resonated with you the
+                most, refreshing your memory and deepening your engagement with each piece. This interactive feature
+                enhances the post-museum experience, transforming it into a collaborative and enriching endeavor.
+            </p>
+            <img class="mockup3" src="./images/Gedankensenf-verlauf.png" />
+        </div>
+
+        <div class="hand">
+            <p class="save-text">Gedankensenf's feature to save favorite art pieces ensures that you can always
+                access them whenever an
+                intriguing conversation about art emerges among your friends.
+                <br /> <br />This capability enables you to actively
+                contribute to discussions, share your insights, and showcase your favorite artworks, creating a more
+                interactive and enjoyable experience surrounding art conversations..
+            </p>
+            <img class="mockup4" src="./images/Gedankensenf-hand.png" />
+        </div>
     </div>
 
-    <div>
-        <img class="mockup1" src="./images/Gedankensenf-start.png" />
-    </div>
-
-    <div>
-        <img class="mockup2" src="./images/Gedankensenf-phones.png" />
-    </div>
-
-    <div class="verlauf">
-        <img class="mockup3" src="./images/Gedankensenf-verlauf.png" />
-    </div>
-
-    <div class="hand">
-        <img class="mockup4" src="./images/Gedankensenf-hand.png" />
-    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>

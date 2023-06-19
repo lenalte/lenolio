@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lenolio/project1</title>
 
+    <link rel="icon" type="image/png" href="./images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -51,6 +52,12 @@
             font-weight: 400;
         }
 
+        p {
+            color: white;
+            font-family: 'Roboto Slab', serif;
+            font-weight: 400;
+        }
+
         .gallery:hover {
             font-weight: 600;
             transition: 0.2s ease;
@@ -64,19 +71,18 @@
         }
 
         .mockup1 {
-            height: 90vh;
-            width: 90vw;
+            height: 100vh;
+            width: 100vw;
             object-fit: cover;
             margin-left: auto;
             margin-right: auto;
             display: block;
             margin-bottom: 10rem;
-            margin-top: 5rem;
         }
 
         .mockup2 {
-            height: 85vh;
-            width: 50vw;
+            height: 90vh;
+            width: 55vw;
             object-fit: cover;
             margin-left: 5rem;
             margin-bottom: 10rem;
@@ -84,23 +90,46 @@
         }
 
         .mockup3 {
-            height: 80vh;
-            width: 62.5vw;
+            height: 88vh;
+            width: 70.5vw;
             object-fit: cover;
-            margin-left: 5rem;
+            margin-left: 3rem;
             margin-right: auto;
             margin-bottom: 15rem;
         }
 
         .mockup4 {
-            height: 65vh;
-            width: 98vw;
+            height: 130vh;
+            width: 163vw;
             object-fit: cover;
-            margin-bottom: 3rem;
+            margin-bottom: 0rem;
             margin-left: auto;
             margin-right: auto;
             display: block;
-            margin-bottom: 5rem;
+            margin-top: -10rem;
+        }
+
+        .mockup-container {
+            padding-top: 3rem;
+        }
+
+        .explenation {
+            display: flex;
+        }
+
+        .explenation-text {
+            margin-top: 10rem;
+            margin-left: 2rem;
+            margin-right: 5rem;
+        }
+
+        .text2 {
+            margin-left: -6rem;
+        }
+
+        .text3 {
+            margin-top: 14rem;
+            margin-left: -28rem;
         }
     </style>
 </head>
@@ -109,25 +138,64 @@
     <h1 class="title">lenolio</h1>
 
     <div class="menu">
-        <h1 class="gallery" href="#">gallery</h1>
-        <h1 class="projects" href="#">projects</h1>
+        <h1 type="button" class="gallery" onClick="navigateToIndex();">
+            gallery</h1>
+        <h1 type="button" class="projects" onClick="navigateToProjects();">
+            projects</h1>
+    </div>
+    <div class="mockup-container">
+        <div>
+            <img class="mockup1" src="./images/symposium1.png" />
+        </div>
+
+        <div class="explenation">
+            <img class="mockup2" src="./images/symposium2.png" />
+            <p class="explenation-text">Symposium is an innovative party planning platform that revolutionizes the way
+                you organize and coordinate your events. This
+                website offers a wide range of features designed to simplify every aspect of party planning, from start
+                to finish.
+                <br /> <br />
+                One of the standout features is "Less is More", which allows your guests to effortlessly track their
+                financial contributions to the party. This transparency enables everyone to see how much they have
+                contributed and helps determine who should stay behind to assist with post-party cleanup.
+                <br /> <br />
+                Furthermore, Symposium goes beyond party planning by fostering connections among guests. If you
+                receive an invitation to a Symposium-hosted party, you gain access to a list of other invitees. This
+                enables you to reach out and coordinate carpooling arrangements, making transportation logistics a
+                breeze.
+            </p>
+        </div>
+
+        <div class="explenation">
+            <img class="mockup3" src="./images/symposium3.png" />
+            <p class="explenation-text text2">Another valuable feature offered by Symposium is the "shopping list." This
+                feature simplifies the process of procuring party essentials by allowing the party planner to compile a
+                list of required items. The list can then be shared with the invited guests, enabling everyone to select
+                and commit to bringing specific items of their choice to the party. The flexibility of this feature
+                allows participants to decide how many items they are willing to provide.
+                <br /> <br />
+                Once a guest clicks on an item from the shopping list, it is automatically marked as taken and added to
+                their personal shopping list. This ensures that other participants no longer see the item as available
+                since it has already been claimed.
+                <br /> <br />
+                The shopping list feature plays a significant role in supporting the "Less is More" functionality as it
+                assists in calculating each participant's financial contribution by tracking the items selected from
+                the list.
+            </p>
+        </div>
+
+        <div class="explenation">
+            <img class="mockup4" src="./images/symposium4.png" />
+            <p class="explenation-text text3">Furthermore, Symposium provides a seamless experience for creating and
+                sending
+                invitations directly
+                through the website. <br /> <br />Say goodbye to the hassle of traditional invitation methods; now you
+                can
+                effortlessly plan your party and send out invitations in one convenient location.</p>
+        </div>
     </div>
 
-    <div>
-        <img class="mockup1" src="./images/symposium4.png" />
-    </div>
-
-    <div>
-        <img class="mockup2" src="./images/symposium2.png" />
-    </div>
-
-    <div>
-        <img class="mockup3" src="./images/symposium3.png" />
-    </div>
-
-    <div>
-        <img class="mockup4" src="./images/symposium1.png" />
-    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
